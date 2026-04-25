@@ -18,7 +18,6 @@ Leave requests of ≤ 2 days are auto-approved; > 2 days require manager approva
 If an employee exceeds their 12-leave quota, a pay cut is applied
 Leave balance is updated on every approval
 
-
 ---
 
 # Entities : 
@@ -32,3 +31,13 @@ Manager extends User : List<Employee>
 Leave : id, employee, startDate, endDate, status
 
 ENUM LeaveStatus : APPROVED, PENDING, DENIED
+
+---
+
+# API Endpoints :
+
+POST /api/leaves
+GET /api/leaves/{id}
+GET /api/leaves?empId=1
+GET /api/leaves?managerId=2&status=PENDING
+PATCH /api/leaves/{id}/status (approve / reject)
