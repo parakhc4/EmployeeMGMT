@@ -1,17 +1,17 @@
 # Functional Requirements:
 
-# # Employee
+## Employee
 
 Apply for leave by selecting a date range
 View leave status (pending, approved, rejected)
 View leave balance and leave history
 
-# # Manager
+## Manager
 
 View all pending leave requests from their team
 Approve or reject a leave request
 
-# # System
+## System
 
 Each employee gets 12 leaves per year
 Leave requests of ≤ 2 days are auto-approved; > 2 days require manager approval
