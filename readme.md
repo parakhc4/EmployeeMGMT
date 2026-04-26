@@ -37,7 +37,11 @@ ENUM LeaveStatus : APPROVED, PENDING, DENIED
 # API Endpoints :
 
 POST /api/leaves
+
 GET /api/leaves/{id}
+
 GET /api/leaves?empId=1
+
 GET /api/leaves?managerId=2&status=PENDING
+
 PATCH /api/leaves/{id}/status (approve / reject)
