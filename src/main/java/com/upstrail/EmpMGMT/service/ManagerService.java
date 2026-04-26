@@ -29,6 +29,6 @@ public class ManagerService {
 
     public List<Leave> viewPendingLeaves(Manager manager, LeaveStatus status)
     {
-        return leaveRepo.viewPendingLeaves(manager, LeaveStatus.PENDING);
+        return leaveRepo.findByEmployee_ManagerAndStatus(manager, LeaveStatus.PENDING);
     }
 }

@@ -8,6 +8,7 @@ import java.time.*;
 
 @Data
 @Entity
+@Table(name="leaves")
 public class Leave {
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)

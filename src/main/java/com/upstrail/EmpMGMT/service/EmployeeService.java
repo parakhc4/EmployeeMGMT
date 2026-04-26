@@ -1,5 +1,6 @@
 package com.upstrail.EmpMGMT.service;
 
+import com.upstrail.EmpMGMT.repository.EmployeeRepository;
 import com.upstrail.EmpMGMT.repository.LeaveRepository;
 import java.util.*;
 
@@ -12,9 +13,13 @@ import com.upstrail.EmpMGMT.model.*;
 public class EmployeeService {
     @Autowired
     private LeaveRepository leaveRepository;
+    @Autowired
+    private EmployeeRepository empRepository;
 
     public List<Leave> getAllLeaves(Long empId){
-        return leaveRepository.findAllById(empId).orElseThrow(()->new RuntimeException("emp id not found"));
+        Employee emp = empRepository.findById(empId)
+            .orElseThrow(() -> new RuntimeException("Employee not found"));
+        return leaveRepository.findByEmployee(emp);
     }
     
 }

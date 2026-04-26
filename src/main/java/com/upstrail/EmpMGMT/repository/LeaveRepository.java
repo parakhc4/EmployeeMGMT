@@ -7,5 +7,6 @@ import java.util.*;
 
 
 public interface LeaveRepository extends JpaRepository<Leave,Long>{
-    public List<Leave> viewPendingLeaves(Manager manager,LeaveStatus status); 
+    public List<Leave> findByEmployee_ManagerAndStatus(Manager manager,LeaveStatus status); 
+    public List<Leave> findByEmployee(Employee emp);
 }
