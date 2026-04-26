@@ -11,7 +11,7 @@ import jakarta.persistence.OneToMany;
 public class Employee extends User{
     
     @ManyToOne
-    @JoinColumn(name="managerId")
+    @JoinColumn(name="manager_id")
     private Manager manager;
     private int leaveBalance = 12;
     private Boolean payCutApplied;
